@@ -1,31 +1,25 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
-public class Button : MonoBehaviour {
-
-	public Material overButton;
-	public Material pressButton;
+public class ButtonBehaviour : MonoBehaviour {
+	
 	public Material normalButton;
-
-	private bool isClicked = false;
-	private bool isMouseOver = false;
-	private bool OffMouseOver = true;
-
-	private float currentTimeAfterClick = 0f;
-	private float currentTimeAfterOver = 0f;
-
+	public Material pressButton;
+	public Material overButton;
+	private float currentTimeAfterClick;
+	private float currentTimeAfterOver;
+	private bool isClicked;
+	private bool isMouseOver;
 	public Renderer rendererButton;
-
+	
+	// Use this for initialization
 	void Start () {
 		rendererButton.material = normalButton;
+	
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if(!isMouseOver && !isClicked){
-			rendererButton.material = normalButton;
-		}
-
 		if(isClicked == true){
 			currentTimeAfterClick += Time.deltaTime;
 			if(currentTimeAfterClick > 0.1f){
@@ -36,41 +30,32 @@ public class Button : MonoBehaviour {
 				else
 					rendererButton.material = overButton;
 			}	
-			
+				
 		}
-
-		OffMouseOver = true;
-
 		if(isMouseOver == true){
 			currentTimeAfterOver += Time.deltaTime;
-			if(currentTimeAfterOver > 0.4f && OffMouseOver){
+			if(currentTimeAfterOver > 0.1f){
 				currentTimeAfterOver = 0;
 				isMouseOver = false;
 				rendererButton.material = normalButton;
 			}
-			
+				
 		}
-
-
+	
 	}
-
+	
 	void OnClick(){
-
 		isClicked = true;
 		rendererButton.material = pressButton;
-
+		currentTimeAfterClick = 0;
+		
 	}
-
+	
 	void OnMouseOver(){
-		OffMouseOver = false;
 		isMouseOver = true;
-		if (isClicked) {
-			rendererButton.material = pressButton;
-		} else {
+		currentTimeAfterOver = 0;
+		if(isClicked == false)
 			rendererButton.material = overButton;
-		}
-
+	
 	}
-
-
 }

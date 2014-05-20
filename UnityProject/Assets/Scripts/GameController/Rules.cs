@@ -4,6 +4,7 @@ using System.Collections;
 public class Rules : MonoBehaviour {
 
 	public GameObject Player;
+	public int Level;
 	// Use this for initialization
 	void Start () {
 	
@@ -17,7 +18,7 @@ public class Rules : MonoBehaviour {
 	void respawn ()
 	{
 		if (Player.transform.localPosition.y < -5) {
-			Application.LoadLevel ("Level1");
+			Application.LoadLevel ("Level"+Level);
 		}
 	}
 }

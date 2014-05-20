@@ -46,15 +46,18 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\BulletBehaviour.cs" />
+     <Compile Include="Assets\Scripts\ButtonInput\ButtonBehaviour.cs" />
+     <Compile Include="Assets\Scripts\ButtonInput\InputController.cs" />
      <Compile Include="Assets\Scripts\GameController\DayBehaviour.cs" />
      <Compile Include="Assets\Scripts\GameController\RotationBehaviour.cs" />
      <Compile Include="Assets\Scripts\GameController\Rules.cs" />
-     <Compile Include="Assets\Scripts\Input\Button.cs" />
-     <Compile Include="Assets\Scripts\Input\ButtonBehaviour.cs" />
-     <Compile Include="Assets\Scripts\Input\InputController.cs" />
+     <Compile Include="Assets\Scripts\PlayerBehaviour\CharacterLook.cs" />
      <Compile Include="Assets\Scripts\PlayerBehaviour\CharacterMotor.cs" />
-     <Compile Include="Assets\Scripts\SpawnBulletBehaviour.cs" />
+     <Compile Include="Assets\Scripts\PlayerBehaviour\PlayerBehavior.cs" />
+     <Compile Include="Assets\Scripts\PlayerBehaviour\PlayerRotate.cs" />
+     <Compile Include="Assets\Scripts\PlayerBehaviour\ScriptReference.cs" />
+     <Compile Include="Assets\Scripts\ShooterBehaviour\BulletBehaviour.cs" />
+     <Compile Include="Assets\Scripts\ShooterBehaviour\SpawnBulletBehaviour.cs" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
