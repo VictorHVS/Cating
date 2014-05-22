@@ -53,6 +53,7 @@
      <Compile Include="Assets\Scripts\GameController\Rules.cs" />
      <Compile Include="Assets\Scripts\PlayerBehaviour\CharacterLook.cs" />
      <Compile Include="Assets\Scripts\PlayerBehaviour\CharacterMotor.cs" />
+     <Compile Include="Assets\Scripts\PlayerBehaviour\CollisonBehaviour.cs" />
      <Compile Include="Assets\Scripts\PlayerBehaviour\PlayerBehavior.cs" />
      <Compile Include="Assets\Scripts\PlayerBehaviour\PlayerRotate.cs" />
      <Compile Include="Assets\Scripts\PlayerBehaviour\ScriptReference.cs" />
