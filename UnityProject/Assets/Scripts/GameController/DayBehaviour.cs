@@ -3,26 +3,27 @@ using System.Collections;
 
 public class DayBehaviour : MonoBehaviour {
 
-
-	private int day = 0;
-
+	public float dayDuration;
+	private float speedRotate;
+	//public  GameObject light;
 
 	void Start () {
-	
+		speedRotate = 360/dayDuration*Time.deltaTime;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		CountDays ();
 
+	void Update () {
+
+		//light.color -= Color.white / 4.0F * Time.deltaTime;
+		light.intensity *= 0.99f;
+
+	}
+
+	void Rotate(){
+		transform.Rotate(speedRotate,0,0);
 	}
 
 	void CountDays (){
-		if (transform.localEulerAngles.y == 1.0 ) {
-			day += 1;	
-			print ("Day: " + day);
-		}
-
-
 	}
+
+
 }
