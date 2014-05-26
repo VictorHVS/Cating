@@ -48,6 +48,7 @@ public class ButtonBehaviour : MonoBehaviour {
 		isClicked = true;
 		rendererButton.material = pressButton;
 		currentTimeAfterClick = 0;
+		Application.LoadLevel ("level1");
 		
 	}
 	
