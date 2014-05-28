@@ -20,7 +20,7 @@ public class CollisonBehaviour : MonoBehaviour {
 	void OnTriggerEnter(Collider hit){
 		if(hit.transform.tag == "checkPoint"){
 			checkPointPosition = hit.transform.position;
-			checkPointRotate = hit.transform.localRotation;
+			checkPointRotate = transform.localRotation;
 			Destroy(hit.gameObject);
 		}
 		if(hit.transform.tag == "portal"){

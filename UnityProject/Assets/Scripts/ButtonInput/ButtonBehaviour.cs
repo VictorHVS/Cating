@@ -11,6 +11,7 @@ public class ButtonBehaviour : MonoBehaviour {
 	private bool isClicked;
 	private bool isMouseOver;
 	public Renderer rendererButton;
+	public string Scene;
 	
 	// Use this for initialization
 	void Start () {
@@ -48,7 +49,7 @@ public class ButtonBehaviour : MonoBehaviour {
 		isClicked = true;
 		rendererButton.material = pressButton;
 		currentTimeAfterClick = 0;
-		Application.LoadLevel ("level1");
+		Application.LoadLevel (Scene);
 		
 	}
 	

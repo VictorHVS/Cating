@@ -60,7 +60,11 @@
      <Compile Include="Assets\Scripts\PlayerBehaviour\ScriptReference.cs" />
      <Compile Include="Assets\Scripts\ShooterBehaviour\BulletBehaviour.cs" />
      <Compile Include="Assets\Scripts\ShooterBehaviour\SpawnBulletBehaviour.cs" />
+     <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
+ <Reference Include="Assembly-UnityScript-firstpass">
+ <HintPath>Library\ScriptAssemblies\Assembly-UnityScript-firstpass.dll</HintPath>
+ </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

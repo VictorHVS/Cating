@@ -15,7 +15,7 @@ public class LightIntensity : MonoBehaviour {
 	void Update () {
 		speedSunDown = gameController.GetComponent<Rules> ().speedHours/40;
 
-		if(gameController.GetComponent<Rules> ().hour > 4 && 
+		if(gameController.GetComponent<Rules> ().hour > 5 && 
 		   gameController.GetComponent<Rules> ().hour < 17.5 && isNight){
 			Day();
 		}
@@ -24,7 +24,7 @@ public class LightIntensity : MonoBehaviour {
 		}
 	}
 	void Night (){
-		if (light.intensity > 0.2) {
+		if (light.intensity > 0.3) {
 			light.intensity *= 1 - speedSunDown;
 		}else{
 			isNight = true;

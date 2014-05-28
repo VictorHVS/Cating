@@ -12,7 +12,7 @@ public class Rules : MonoBehaviour {
 	
 	void Update () {
 		hour += speedHours * Time.deltaTime;
-		if(hour> 24){
+		if(hour > 24){
 			hour -= 24;
 		}
 	}
