@@ -48,10 +48,14 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\ButtonInput\ButtonBehaviour.cs" />
      <Compile Include="Assets\Scripts\ButtonInput\InputController.cs" />
+     <Compile Include="Assets\Scripts\Camera\CameraPlayerBehaviour.cs" />
+     <Compile Include="Assets\Scripts\Camera\skyboxBehaviour.cs" />
      <Compile Include="Assets\Scripts\GameController\LightIntensity.cs" />
      <Compile Include="Assets\Scripts\GameController\RotationBehaviour.cs" />
      <Compile Include="Assets\Scripts\GameController\Rules.cs" />
-     <Compile Include="Assets\Scripts\GameController\skyboxBehaviour.cs" />
+     <Compile Include="Assets\Scripts\Panel\ChangeColor.cs" />
+     <Compile Include="Assets\Scripts\Panel\CubePanelBehaviour.cs" />
+     <Compile Include="Assets\Scripts\Panel\RotateAngleMesh.cs" />
      <Compile Include="Assets\Scripts\PlayerBehaviour\CharacterLook.cs" />
      <Compile Include="Assets\Scripts\PlayerBehaviour\CharacterMotor.cs" />
      <Compile Include="Assets\Scripts\PlayerBehaviour\CollisonBehaviour.cs" />

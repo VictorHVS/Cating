@@ -5,11 +5,12 @@ public class PlayerRotate : MonoBehaviour {
 
 	private bool moveRight;
 	private bool moveLeft;
-	private float angle;
+	private float angleRotate;
 	private bool unBug;
 	private float y;
 
 	public int speed = 80;
+	public int angle = 90;
 	private float targetSpeed;
 
 	void Start () {
@@ -30,14 +31,14 @@ public class PlayerRotate : MonoBehaviour {
 	void moveRotateRight ()
 	{
 		transform.Rotate (0, speed * Time.deltaTime , 0);
-		angle += speed * Time.deltaTime;
-		if(angle >= 90){
-			angle -= 90;
+		angleRotate += speed * Time.deltaTime;
+		if(angleRotate >= angle){
+			angleRotate -= angle;
 			unBug = true;
 			moveRight = false;
 			if (unBug) {
-				transform.Rotate (0,-angle,0);
-				angle = 0;
+				transform.Rotate (0,-angleRotate,0);
+				angleRotate = 0;
 				unBug = false;
 			}
 		}
@@ -46,14 +47,14 @@ public class PlayerRotate : MonoBehaviour {
 	void moveRotateLeft ()
 	{
 		transform.Rotate (0, -speed * Time.deltaTime , 0);
-		angle+= speed * Time.deltaTime;
-		if(angle >= 90){
-			angle -= 90;
+		angleRotate+= speed * Time.deltaTime;
+		if(angleRotate >= angle){
+			angleRotate -= angle;
 			unBug = true;
 			moveLeft = false;
 			if (unBug) {
-				transform.Rotate (0,angle,0);
-				angle = 0;
+				transform.Rotate (0,angleRotate,0);
+				angleRotate = 0;
 				unBug = false;
 			}
 		}

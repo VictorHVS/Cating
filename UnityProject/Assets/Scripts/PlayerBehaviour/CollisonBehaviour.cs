@@ -6,6 +6,7 @@ public class CollisonBehaviour : MonoBehaviour {
 	public int currentLevel;
 	private Vector3 checkPointPosition;
 	private Quaternion checkPointRotate;
+	public GameObject cubePanel;
 
 	// Use this for initialization
 	void Start () {
@@ -21,6 +22,7 @@ public class CollisonBehaviour : MonoBehaviour {
 		if(hit.transform.tag == "checkPoint"){
 			checkPointPosition = hit.transform.position;
 			checkPointRotate = transform.localRotation;
+			cubePanel.GetComponent<CubePanelBehaviour>().setCountCube();
 			Destroy(hit.gameObject);
 		}
 		if(hit.transform.tag == "portal"){
