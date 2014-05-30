@@ -11,9 +11,9 @@ FBXHeaderExtension:  {
 		Year: 2014
 		Month: 05
 		Day: 30
-		Hour: 00
-		Minute: 52
-		Second: 33
+		Hour: 01
+		Minute: 09
+		Second: 20
 		Millisecond: 0
 	}
 	Creator: "FBX SDK/FBX Plugins build 20070228"
@@ -21,7 +21,7 @@ FBXHeaderExtension:  {
 		FlagPLE: 0
 	}
 }
-CreationTime: "2014-05-30 00:52:33:000"
+CreationTime: "2014-05-30 01:09:20:000"
 Creator: "Blender version 2.70 (sub 0)"
 
 ; Object definitions
@@ -130,8 +130,8 @@ Objects:  {
 		MultiTake: 1
 		Shading: Y
 		Culling: "CullingOff"
-		Vertices: -0.707107,0.707107,-1.414214,0.707107,-0.707107,-1.414214,-0.292894,-1.707107,0.000000,-1.707107,-0.292893,-0.000000,
-		          0.292894,1.707107,-0.000000,1.707107,0.292892,0.000000,0.707106,-0.707107,1.414214,-0.707107,0.707107,1.414214
+		Vertices: 0.997148,0.994700,-1.414536,2.411362,-0.419514,-1.414536,1.411361,-1.419514,-0.000322,-0.002852,-0.005300,-0.000323,
+		          1.997149,1.994700,-0.000323,3.411362,0.580485,-0.000322,2.411361,-0.419514,1.413892,0.997148,0.994700,1.413891
 		PolygonVertexIndex: 0,1,2,-4,4,7,6,-6,0,4,5,-2,1,5,6,-3,2,6,7,-4,4,0,3,-8
 		GeometryVersion: 124
 		LayerElementNormal: 0 {
