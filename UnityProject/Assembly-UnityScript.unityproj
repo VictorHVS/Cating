@@ -5,11 +5,11 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{5B580621-09B4-68CB-B5F4-5B9DD210A60F}</ProjectGuid>
+	<ProjectGuid>{137A7369-EC96-0CC2-09B9-FE1D6DE1A3E3}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
-	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<AssemblyName>Assembly-UnityScript</AssemblyName>
 	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
 	<FileAlignment>512</FileAlignment>
 	<BaseDirectory>Assets</BaseDirectory>
@@ -46,28 +46,13 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\ButtonInput\ButtonBehaviour.cs" />
-     <Compile Include="Assets\Scripts\ButtonInput\InputController.cs" />
-     <Compile Include="Assets\Scripts\Camera\CameraPlayerBehaviour.cs" />
-     <Compile Include="Assets\Scripts\Camera\skyboxBehaviour.cs" />
-     <Compile Include="Assets\Scripts\GameController\LightIntensity.cs" />
-     <Compile Include="Assets\Scripts\GameController\RotationBehaviour.cs" />
-     <Compile Include="Assets\Scripts\GameController\Rules.cs" />
-     <Compile Include="Assets\Scripts\Panel\ChangeColor.cs" />
-     <Compile Include="Assets\Scripts\Panel\RotateAngleMesh.cs" />
-     <Compile Include="Assets\Scripts\PlayerBehaviour\CharacterLook.cs" />
-     <Compile Include="Assets\Scripts\PlayerBehaviour\CharacterMotor.cs" />
-     <Compile Include="Assets\Scripts\PlayerBehaviour\CharacterMotorPreview.cs" />
-     <Compile Include="Assets\Scripts\PlayerBehaviour\CollisonBehaviour.cs" />
-     <Compile Include="Assets\Scripts\PlayerBehaviour\PlatformInputController.cs" />
-     <Compile Include="Assets\Scripts\PlayerBehaviour\PlayerRotate.cs" />
-     <Compile Include="Assets\Scripts\ShooterBehaviour\BulletBehaviour.cs" />
-     <Compile Include="Assets\Scripts\ShooterBehaviour\SpawnBulletBehaviour.cs" />
+     <Compile Include="Assets\Scripts\PlayerBehaviour\CharacterMotor.js" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
- <Reference Include="Assembly-UnityScript-firstpass">
- <HintPath>Library\ScriptAssemblies\Assembly-UnityScript-firstpass.dll</HintPath>
- </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-UnityScript-firstpass.unityproj">
+      <Project>{5120E47E-05CF-77CB-C2BE-2B2453982161}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

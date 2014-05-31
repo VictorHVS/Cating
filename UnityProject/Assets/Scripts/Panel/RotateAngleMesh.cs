@@ -10,17 +10,12 @@ public class RotateAngleMesh : MonoBehaviour {
 	private float angleRotate;
 	private bool rotate;
 
-	void Start () {
-	
-	}
-
 	void Update () {
 		Rotate ();
 	}
-	
 	public void Rotate(){
 		if(rotate){
-			transform.Rotate (0, 0, speed * Time.deltaTime);
+			transform.Rotate (0, speed * Time.deltaTime, 0);
 			angleRotate += speed * Time.deltaTime;
 			if(angleRotate >= angle){
 				angleRotate = 0;
@@ -28,7 +23,6 @@ public class RotateAngleMesh : MonoBehaviour {
 			}
 		}
 	}
-
 	public void setRotate (bool value){
 		rotate = value;
 	}

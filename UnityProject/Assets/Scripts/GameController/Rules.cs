@@ -2,10 +2,10 @@
 using System.Collections;
 
 public class Rules : MonoBehaviour {
-	
 
 	public float speedHours;
 	public float hour;
+	public int cube;
 	
 	void Start () {
 	}

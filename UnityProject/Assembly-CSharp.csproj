@@ -54,14 +54,13 @@
      <Compile Include="Assets\Scripts\GameController\RotationBehaviour.cs" />
      <Compile Include="Assets\Scripts\GameController\Rules.cs" />
      <Compile Include="Assets\Scripts\Panel\ChangeColor.cs" />
-     <Compile Include="Assets\Scripts\Panel\CubePanelBehaviour.cs" />
      <Compile Include="Assets\Scripts\Panel\RotateAngleMesh.cs" />
      <Compile Include="Assets\Scripts\PlayerBehaviour\CharacterLook.cs" />
      <Compile Include="Assets\Scripts\PlayerBehaviour\CharacterMotor.cs" />
+     <Compile Include="Assets\Scripts\PlayerBehaviour\CharacterMotorPreview.cs" />
      <Compile Include="Assets\Scripts\PlayerBehaviour\CollisonBehaviour.cs" />
-     <Compile Include="Assets\Scripts\PlayerBehaviour\PlayerBehavior.cs" />
+     <Compile Include="Assets\Scripts\PlayerBehaviour\PlatformInputController.cs" />
      <Compile Include="Assets\Scripts\PlayerBehaviour\PlayerRotate.cs" />
-     <Compile Include="Assets\Scripts\PlayerBehaviour\ScriptReference.cs" />
      <Compile Include="Assets\Scripts\ShooterBehaviour\BulletBehaviour.cs" />
      <Compile Include="Assets\Scripts\ShooterBehaviour\SpawnBulletBehaviour.cs" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />

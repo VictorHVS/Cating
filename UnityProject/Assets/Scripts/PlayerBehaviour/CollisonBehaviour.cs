@@ -6,14 +6,13 @@ public class CollisonBehaviour : MonoBehaviour {
 	public int currentLevel;
 	private Vector3 checkPointPosition;
 	private Quaternion checkPointRotate;
-	public GameObject cubePanel;
+	public GameObject gameController;
+	public GameObject CubePanel;
 
-	// Use this for initialization
 	void Start () {
 		checkPointPosition = transform.position;
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
 		respawn();
 	}
@@ -22,7 +21,8 @@ public class CollisonBehaviour : MonoBehaviour {
 		if(hit.transform.tag == "checkPoint"){
 			checkPointPosition = hit.transform.position;
 			checkPointRotate = transform.localRotation;
-			cubePanel.GetComponent<CubePanelBehaviour>().setCountCube();
+			gameController.GetComponent<Rules>().cube ++;
+			CubePanel.GetComponent<RotateAngleMesh>().setRotate(true);
 			Destroy(hit.gameObject);
 		}
 		if(hit.transform.tag == "portal"){
@@ -30,7 +30,6 @@ public class CollisonBehaviour : MonoBehaviour {
 			Destroy(hit.gameObject);
 		}
 	}
-
 	void respawn (){
 		if (transform.localPosition.y < -5) {
 			transform.position = checkPointPosition;
