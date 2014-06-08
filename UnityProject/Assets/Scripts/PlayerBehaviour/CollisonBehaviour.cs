@@ -25,8 +25,8 @@ public class CollisonBehaviour : MonoBehaviour {
 			CubePanel.GetComponent<RotateAngleMesh>().setRotate(true);
 			Destroy(hit.gameObject);
 		}
-		if(hit.transform.tag == "portal"){
-			Application.LoadLevel ("Level"+(currentLevel+1));
+		if(hit.transform.tag == "Portal"){
+			Application.LoadLevel ("MapLevel");
 			Destroy(hit.gameObject);
 		}
 	}

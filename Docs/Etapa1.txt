@@ -1,0 +1,28 @@
+Na primeira etapa desse projeto, assim como foi proposto, é apresentado um modelo inicial de diagrama de classe, que demonstra como os componentes(Scripts) se comunicam afim de gerar uma harmonia no game.
+
+Ainda nesse diagrama foi descrito o padrão MVC onde torna cada camada separada das demais. O padrão DAO se enquadra bem nesse contexo e é explorado para conseguirmos um código mais abstrato. Poucos padrãoes de projetos devem ser utilizados no desenrolar do game, isso se deve pelo o fato de não haver necessidade e a IDE trabalhar com algumas soluções mais inteligentes para lidar com esses tipos de problemas.
+A persistência de dados escolhido para compor o game é gerenciado pela a própria IDE. 
+
+RESUMO DO DIAGRAMA:
+Resolvi descrever aqui como funciona a representação gráfica do diagrama, tendo em vista que esse é um diagrama peculiar.
+Basicamente quando comecei a programar o jogo tentei utilizar algumas classes para concentrar informações necessárias para o desenrrolar do jogo. O maior exemplo disso é o Script "PlataformImputController", que tem como objetivo concentrar os inputs do game e distribuir para as demais classes. Dessa forma torno mais simples a manutenção de inputs no game. Mais uma vez essa prática é utilizada na classe "Rules", ela além de controlar o sistema de dias e noites desenvolvido no jogo ela ainda se comunica com o painel de informações para informar ao usuário dados relevantes. 
+
+OBS.: Pode surgir em algum momento a pergunta do porque dos nomes das classes. Pois bem, vale ressaltar que essas classes são apenas componentes de outros objetos em cenas e esses objetos por sua vez tem seus próprios nomes.
+
+
+MAIS INFORMAÇÕES:
+Diferente de como são trabalhados em softwares corporativos, em jogos muitas das vezes temos as classes sendo usadas como componentes de objetos (graficos ou não) na cena do jogo. 
+Isso se deve pelo fato dessas classes implementarem a classe "monoBehavior". Todos os Scripts que implementam essa classe utilizam opcionalmente dois métodos padrões para interagir com o game, que são eles: Start e Updade.
+Os nomes já são mais que sugestiveis, o método Start é chamado sempre que o script é iniciado(algo semelhante com um construtor, porém ele é execultado depois do real construtor da classe) enquanto que o método Update é chamado a todo frame do jogo.
+
+Para um jogo ser execultado com fluidez, são necessários cerca de 50 frames por segundo(todos as classes que implementam o método Update, são executados cerca de 50 vezes a cada segundo, porém esse numero varia conforme o hardware disponivel) daí a importâncida e tomarmos muito cuidado com o código. 
+
+OBS.: Todos os Scripts até o momento foram desenvolvidos em C#.
+Caminho para os Scripts: "/master/UnityProject/Assets/Scripts". Os scripts estão separados em pastas com os objetos de devem receber tal scripts.
+
+
+
+
+
+Modificado por: Lucas Nogueira 
+Data da Modificação: 07/06/2014 

@@ -50,7 +50,9 @@
      <Compile Include="Assets\Scripts\ButtonInput\InputController.cs" />
      <Compile Include="Assets\Scripts\Camera\CameraPlayerBehaviour.cs" />
      <Compile Include="Assets\Scripts\Camera\skyboxBehaviour.cs" />
+     <Compile Include="Assets\Scripts\Database\databaseUser0.cs" />
      <Compile Include="Assets\Scripts\GameController\LightIntensity.cs" />
+     <Compile Include="Assets\Scripts\GameController\RotateButton.cs" />
      <Compile Include="Assets\Scripts\GameController\RotationBehaviour.cs" />
      <Compile Include="Assets\Scripts\GameController\Rules.cs" />
      <Compile Include="Assets\Scripts\Panel\ChangeColor.cs" />
