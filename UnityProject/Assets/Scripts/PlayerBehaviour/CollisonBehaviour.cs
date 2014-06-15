@@ -26,6 +26,7 @@ public class CollisonBehaviour : MonoBehaviour {
 			Destroy(hit.gameObject);
 		}
 		if(hit.transform.tag == "Portal"){
+			databaseUser0.setCube(gameController.GetComponent<Rules>().cube);
 			Application.LoadLevel ("MapLevel");
 			Destroy(hit.gameObject);
 		}

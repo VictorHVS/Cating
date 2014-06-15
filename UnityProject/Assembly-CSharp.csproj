@@ -49,8 +49,12 @@
      <Compile Include="Assets\Scripts\ButtonInput\ButtonBehaviour.cs" />
      <Compile Include="Assets\Scripts\ButtonInput\InputController.cs" />
      <Compile Include="Assets\Scripts\Camera\CameraPlayerBehaviour.cs" />
+     <Compile Include="Assets\Scripts\Camera\Shake.cs" />
      <Compile Include="Assets\Scripts\Camera\skyboxBehaviour.cs" />
+     <Compile Include="Assets\Scripts\CheckSaved\CheckSaved.cs" />
+     <Compile Include="Assets\Scripts\Database\VerificationDatabase.cs" />
      <Compile Include="Assets\Scripts\Database\databaseUser0.cs" />
+     <Compile Include="Assets\Scripts\GameController\InputPlataform.cs" />
      <Compile Include="Assets\Scripts\GameController\LightIntensity.cs" />
      <Compile Include="Assets\Scripts\GameController\RotateButton.cs" />
      <Compile Include="Assets\Scripts\GameController\RotationBehaviour.cs" />

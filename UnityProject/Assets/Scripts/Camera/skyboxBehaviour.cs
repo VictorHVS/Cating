@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class skyboxBehaviour : MonoBehaviour {
@@ -8,16 +8,17 @@ public class skyboxBehaviour : MonoBehaviour {
 	public GameObject gameController;
 	private bool isNight;
 	private bool isDay;
+	public Camera mainCamera;
 
 	void Start () {
-		camera.backgroundColor = skyDay;
+		mainCamera.backgroundColor = skyDay;
 	}
 
 	void Update () {
 		if(gameController.GetComponent<Rules> ().hour > 5 && gameController.GetComponent<Rules> ().hour < 17.5 ){
-			camera.backgroundColor = Color.Lerp (camera.backgroundColor, skyDay, gameController.GetComponent<Rules> ().speedHours * Time.deltaTime);
+			mainCamera.backgroundColor = Color.Lerp (mainCamera.backgroundColor, skyDay, gameController.GetComponent<Rules> ().speedHours * Time.deltaTime);
 		}else{
-			camera.backgroundColor = Color.Lerp (camera.backgroundColor, skyNight, gameController.GetComponent<Rules> ().speedHours * Time.deltaTime);
+			mainCamera.backgroundColor = Color.Lerp (mainCamera.backgroundColor, skyNight, gameController.GetComponent<Rules> ().speedHours * Time.deltaTime);
 		}
 
 	}

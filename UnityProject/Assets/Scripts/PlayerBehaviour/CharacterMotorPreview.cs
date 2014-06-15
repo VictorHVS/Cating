@@ -27,7 +27,7 @@ public class CharacterMotorPreview : MonoBehaviour {
 			moveDirection.x = Input.GetAxis("Horizontal") * speed;
 			//moveDirection = transform.TransformDirection(moveDirection);
 			moveDirection.y -= gravity * Time.deltaTime;
-			if (controller.isGrounded && Input.GetButton("Jump")) {
+			if (controller.isGrounded && Input.GetButtonDown("Jump")) {
 				moveDirection.y = jumpForce;
 			}
 			controller.Move(moveDirection * Time.deltaTime);
@@ -36,7 +36,7 @@ public class CharacterMotorPreview : MonoBehaviour {
 			moveDirection.x = 0;
 			moveDirection.z = Input.GetAxis("Horizontal") * -speed;
 			moveDirection.y -= gravity * Time.deltaTime;
-			if (controller.isGrounded && Input.GetButton("Jump")) {
+			if (controller.isGrounded && Input.GetButtonDown("Jump")) {
 				moveDirection.y = jumpForce;
 			}
 			controller.Move(moveDirection * Time.deltaTime);
@@ -45,7 +45,7 @@ public class CharacterMotorPreview : MonoBehaviour {
 			moveDirection.z = 0;
 			moveDirection.x = Input.GetAxis("Horizontal") * -speed;
 			moveDirection.y -= gravity * Time.deltaTime;
-			if (controller.isGrounded && Input.GetButton("Jump")) {
+			if (controller.isGrounded && Input.GetButtonDown("Jump")) {
 				moveDirection.y = jumpForce;
 			}
 			controller.Move(moveDirection * Time.deltaTime);
@@ -55,7 +55,7 @@ public class CharacterMotorPreview : MonoBehaviour {
 			moveDirection.x = 0;
 			moveDirection.z = Input.GetAxis("Horizontal") * speed;
 			moveDirection.y -= gravity * Time.deltaTime;
-			if (controller.isGrounded && Input.GetButton("Jump")) {
+			if (controller.isGrounded && Input.GetButtonDown("Jump")) {
 				moveDirection.y = jumpForce;
 			}
 			controller.Move(moveDirection * Time.deltaTime);
