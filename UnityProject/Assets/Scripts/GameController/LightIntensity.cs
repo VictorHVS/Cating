@@ -5,7 +5,7 @@ public class LightIntensity : MonoBehaviour {
 
 	public GameObject gameController;
 	public float maxIntensity = 1f;
-	public float minIntensity = 0.3f;
+	public float minIntensity = 0.5f;
 	private bool isDay = true;
 	private bool isNight = false;
 	private float speedSunDown;

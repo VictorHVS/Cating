@@ -15,12 +15,14 @@ public class InputPlataform : MonoBehaviour {
 	void Update () {
 		if(!pause){
 			if(Input.GetKeyDown ("z")){
-				player.GetComponent<PlayerRotate>().RotateRight();
+				if(player != null)
+					player.GetComponent<PlayerRotate>().RotateRight();
 
 			}
 
 			if(Input.GetKeyDown ("x")){
-				player.GetComponent<PlayerRotate>().RotateLeft();
+				if(player != null)
+					player.GetComponent<PlayerRotate>().RotateLeft();
 
 			}
 		}

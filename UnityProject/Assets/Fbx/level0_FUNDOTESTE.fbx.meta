@@ -1,25 +1,30 @@
 fileFormatVersion: 2
-guid: b9497a34070ecd24a88386686d47a3a2
+guid: 89a36297df5d07442926c6b13ae7ef24
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: Cal_ada
-    100004: Cobertura
-    100006: Primeiro_andar
-    400000: //RootNode
-    400002: Cal_ada
-    400004: Cobertura
-    400006: Primeiro_andar
-    2300000: Cal_ada
-    2300002: Cobertura
-    2300004: Primeiro_andar
-    3300000: Cal_ada
-    3300002: Cobertura
-    3300004: Primeiro_andar
-    4300000: Cobertura
-    4300002: Cal_ada
-    4300004: Primeiro_andar
+    100000: 1_Floor
+    100002: Ground
+    100004: Ground_001
+    100006: //RootNode
+    100008: Plane
+    400000: 1_Floor
+    400002: Ground
+    400004: Ground_001
+    400006: //RootNode
+    400008: Plane
+    2300000: 1_Floor
+    2300002: Ground
+    2300004: Ground_001
+    2300006: Plane
+    3300000: 1_Floor
+    3300002: Ground
+    3300004: Ground_001
+    3300006: Plane
+    4300000: Ground_001
+    4300002: Plane
+    4300004: 1_Floor
+    4300006: Ground
     7400000: Default Take
     9500000: //RootNode
   materials:

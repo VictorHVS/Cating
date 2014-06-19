@@ -2,40 +2,38 @@
 using System.Collections;
 
 public class CollisonBehaviour : MonoBehaviour {
-	
-	public int currentLevel;
-	private Vector3 checkPointPosition;
-	private Quaternion checkPointRotate;
+
 	public GameObject gameController;
 	public GameObject CubePanel;
+	private Rules rules;
 
 	void Start () {
-		checkPointPosition = transform.position;
+		gameController.GetComponent<Rules>().checkPointPosition = transform.position;
+		rules = gameController.GetComponent<Rules> ();
 	}
 
 	void Update () {
-		respawn();
+
 	}
 
 	void OnTriggerEnter(Collider hit){
+
 		if(hit.transform.tag == "checkPoint"){
-			checkPointPosition = hit.transform.position;
-			checkPointRotate = transform.localRotation;
-			gameController.GetComponent<Rules>().cube ++;
+			rules.checkPointPosition = hit.transform.position;
+			rules.checkPointRotate = transform.localRotation;
+			rules.cubes ++;
 			CubePanel.GetComponent<RotateAngleMesh>().setRotate(true);
 			Destroy(hit.gameObject);
+			CurrentDatabase.currentCubes++;
 		}
 		if(hit.transform.tag == "Portal"){
-			databaseUser0.setCube(gameController.GetComponent<Rules>().cube);
+			databaseUser0.setCube(gameController.GetComponent<Rules>().cubes);
 			Application.LoadLevel ("MapLevel");
 			Destroy(hit.gameObject);
 		}
-	}
-	void respawn (){
-		if (transform.localPosition.y < -5) {
-			transform.position = checkPointPosition;
-			transform.localRotation = checkPointRotate;
-		}
+
 	}
 
+
 }
+
