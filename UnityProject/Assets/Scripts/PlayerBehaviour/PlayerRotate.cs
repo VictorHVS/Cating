@@ -26,19 +26,25 @@ public class PlayerRotate : MonoBehaviour {
 
 		if(moveLeft){
 			moveRotateLeft();
+
 		}else if (moveRight){
 			moveRotateRight();
+
 		}
 
 	}
 	public void RotateRight(){
-		if(!moveLeft)
+		if (!moveLeft) {
+			GetComponent<SoundEfect> ().SoundChangePespective ();
 			moveRight = true;
+		}
 	}
 
 	public void RotateLeft(){
-		if(!moveRight)
+		if (!moveRight) {
+			GetComponent<SoundEfect> ().SoundChangePespective ();
 			moveLeft = true;
+		}
 	}
 
 	void moveRotateRight (){

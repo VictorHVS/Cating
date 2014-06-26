@@ -6,6 +6,7 @@ public class CollisonBehaviour : MonoBehaviour {
 	public GameObject gameController;
 	public GameObject CubePanel;
 	private Rules rules;
+	public AudioClip soundcube;
 
 	void Start () {
 		gameController.GetComponent<Rules>().checkPointPosition = transform.position;
@@ -22,6 +23,8 @@ public class CollisonBehaviour : MonoBehaviour {
 			rules.checkPointPosition = hit.transform.position;
 			rules.checkPointRotate = transform.localRotation;
 			rules.cubes ++;
+			hit.GetComponent<AudioSource>().clip = soundcube;
+			hit.GetComponent<AudioSource>().Play();
 			CubePanel.GetComponent<RotateAngleMesh>().setRotate(true);
 			Destroy(hit.gameObject);
 			CurrentDatabase.currentCubes++;
