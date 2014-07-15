@@ -5,6 +5,8 @@ public class InputPlataform : MonoBehaviour {
 
 	public bool pause = false;
 	public GameObject player;
+	public Renderer pauseScreen;
+
 
 	// Use this for initialization
 	void Start () {
@@ -17,18 +19,28 @@ public class InputPlataform : MonoBehaviour {
 			if(Input.GetKeyDown ("z")){
 				if(player != null)
 					player.GetComponent<PlayerRotate>().RotateRight();
-
 			}
 
 			if(Input.GetKeyDown ("x")){
 				if(player != null)
 					player.GetComponent<PlayerRotate>().RotateLeft();
-
 			}
+
 		}
 		if (Input.GetKeyDown ("p")) {
+			pauseScreen.enabled = !pauseScreen.enabled;
 			Pause();
+
 		}
+		if (Input.GetKeyDown(KeyCode.Escape) && Application.loadedLevel != 1) {
+			Application.LoadLevel ("Menu");
+
+		}
+		if (Input.anyKeyDown && Application.loadedLevel == 2) {
+			Application.LoadLevel ("Menu");
+			
+		}
+
 	}
 
 	//refatorar metodo Pause para o script rules

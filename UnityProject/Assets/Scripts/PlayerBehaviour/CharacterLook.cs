@@ -18,6 +18,5 @@ public class CharacterLook : MonoBehaviour {
 		}if(Input.GetAxis ("Horizontal") > 0){
 			transform.localScale = rightDirection;
 		}
-
 	}
 }
